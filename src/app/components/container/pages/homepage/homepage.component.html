@@ -1,0 +1,27 @@
+<button (click)="openModal('Add')" class="top">Add Product</button>
+<table>
+    <tr>
+        <ng-container *ngFor="let column of columns">
+            <th>{{column}}</th>
+        </ng-container>
+    </tr>
+
+    <ng-container *ngIf="products?.length > 0">
+        <tr *ngFor="let product of products | paginate: { itemsPerPage: size, currentPage: page, totalItems: total }">
+            <td><a [routerLink]="'/pages/details/'+product.id">Website {{ product.productName }}</a></td>
+            <td>
+                <button mat-icon-button [title]="(product.update? 'Can' : 'Cannot') +' Edit'"
+                    (click)="openModal('Update', product); $event.stopPropagation()" [disabled]="!product.update"
+                    [style]="{'cursor': product.update? 'pointer': 'not-allowed'}">
+                    <mat-icon fontIcon="edit"></mat-icon>
+                </button>
+            </td>
+        </tr>
+    </ng-container>
+    <ng-container *ngIf="products?.length === 0">
+        <tr>
+            <td colspan="4"></td>
+        </tr>
+    </ng-container>
+</table>
+<pagination-controls (pageChange)="pageChangeEvent($event)"></pagination-controls>

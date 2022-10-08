@@ -1,0 +1,35 @@
+<form [formGroup]="form">
+    <span>
+        <label>Start Date</label>
+        <input [matDatepicker]="pickerStartDate" formControlName="startDate" placeholder="DD/MM/YYYY">
+        <mat-datepicker-toggle matSuffix [for]="pickerStartDate"></mat-datepicker-toggle>
+        <mat-datepicker #pickerStartDate></mat-datepicker>
+    </span>
+    <span>
+        <label>End Date</label>
+        <input [matDatepicker]="pickerEndDate" formControlName="endDate" placeholder="DD/MM/YYYY">
+        <mat-datepicker-toggle matSuffix [for]="pickerEndDate"></mat-datepicker-toggle>
+        <mat-datepicker #pickerEndDate></mat-datepicker>
+    </span>
+</form>
+<table>
+    <tr>
+        <ng-container *ngFor="let column of columns">
+            <th>{{column}}</th>
+        </ng-container>
+    </tr>
+    <ng-container *ngIf="product?.length > 0">
+        <tr *ngFor="let detail of product | paginate: { itemsPerPage: size, currentPage: page, totalItems: total }">
+            <td>{{ detail.status }}</td>
+            <td>{{ detail.dateTimeString }}</td>
+            <td>{{ detail.remark }}</td>
+            <td>{{ detail.durationString }}</td>
+        </tr>
+    </ng-container>
+    <ng-container *ngIf="product?.length === 0">
+        <tr>
+            <td colspan="4"></td>
+        </tr>
+    </ng-container>
+</table>
+<pagination-controls (pageChange)="pageChangeEvent($event)"></pagination-controls>

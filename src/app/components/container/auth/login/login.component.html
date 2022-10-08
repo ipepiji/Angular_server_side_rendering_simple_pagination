@@ -1,0 +1,16 @@
+<section>
+    <fieldset class="container">
+        <legend>Login</legend>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <p>
+                <input type="text" formControlName="username" placeholder="Username">
+            </p>
+            <p>
+                <input type="password" formControlName="password" placeholder="Password">
+            </p>
+            <p>
+                <button type="submit" [disabled]="form.invalid">Login</button>
+            </p>
+        </form>
+    </fieldset>
+</section>

@@ -1,0 +1,36 @@
+.mat-dialog-container {
+    padding: 0px !important;
+}
+
+fieldset {
+    display: flex;
+    height: 94%;
+
+    legend {
+        font-size: small;
+        font-weight: 300;
+    }
+
+    .content {
+        margin: auto;
+
+        form {
+            input {
+                height: 25px;
+                width: 150px;
+                border: 2px solid;
+                padding-left: 10px;
+                margin-left: 10px;
+            }
+        }
+
+        button {
+            margin-left: 15px;
+            height: 30px;
+            width: 100px;
+            cursor: pointer;
+            border: 1px solid black;
+            box-shadow: 2px 2px 5px black;
+        }
+    }
+}

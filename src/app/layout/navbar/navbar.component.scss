@@ -1,0 +1,19 @@
+ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 20px;
+    overflow: hidden;
+    border-bottom: 1px solid grey;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    text-transform: uppercase;
+    font-size: larger;
+    font-weight: 600;
+
+    li {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}

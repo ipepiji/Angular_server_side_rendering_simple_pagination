@@ -3,6 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  api: 'https://intermediate-test-v-2-web-test.apps.ocp.tmrnd.com.my/api',
   production: false
 };
 

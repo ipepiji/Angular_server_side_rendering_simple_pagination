@@ -1,0 +1,12 @@
+<app-navbar [title]="headerTitle"></app-navbar>
+<div class="container">
+    <div class="main-content">
+        <a routerLink="homepage">
+            <h4 class="title">{{pageTitle}}</h4>
+        </a>
+        <div class="page-content">
+            <router-outlet>
+            </router-outlet>
+        </div>
+    </div>
+</div>

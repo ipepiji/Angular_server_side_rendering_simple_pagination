@@ -1,0 +1,43 @@
+form {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+
+    label {
+        margin-right: 10px;
+    }
+
+    input {
+        height: 25px;
+        width: 200px;
+        border: 2px solid;
+        padding-left: 10px;
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1.5px groove black;
+
+    th,
+    td {
+        padding-left: 10px;
+        text-align: left;
+        border-left: 1.5px groove black;
+        border-right: 1.5px groove black;
+        border-collapse: collapse;
+    }
+
+    tr {
+        height: 35px;
+        &:nth-child(even) {
+            background-color: rgba(64, 87, 109, 0.07);
+        }
+    }
+}
+
+pagination-controls {
+    margin-top: 15px;
+    float: right;
+}

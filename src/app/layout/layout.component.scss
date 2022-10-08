@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    padding-top: 50px;
+
+    .main-content {
+        margin: auto;
+        max-width: 1000px;
+        width: 90%;
+
+        a {
+            text-decoration: none;
+            color: black;
+            float: left;
+
+            h4 {
+                font-weight: 500;
+            }
+        }
+
+        .page-content {
+            margin-top: 50px;
+        }
+    }
+}
